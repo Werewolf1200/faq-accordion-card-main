@@ -1,0 +1,274 @@
+html {
+    box-sizing: border-box;
+    min-height: 100%;
+    min-width: 200px;    
+    
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    width: 100%;
+    min-height: 100%;
+    background-image:linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background-size: cover;
+    padding: 0px;
+    margin: 0px;
+}
+    
+
+main {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(8,100px);
+    
+}
+.woman-desk,
+.patron,
+.box {
+    display: none;
+}
+.woman-mobil {
+    position: relative;
+    top: 10px;
+    left: -15px;
+    margin: 0 auto;
+}
+
+.sombra-mobil  {
+    position: relative;
+    top: 200px;
+    margin: 10px auto;
+}
+
+.contenedor {
+    
+    grid-row-start: 3;
+    grid-row-end: 8;
+    margin: 20px;
+    margin-bottom: 0px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+
+    
+}
+
+.faq-container {
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.faq {
+    font-family: 'Kumbh Sans', sans-serif;
+    margin: 10px;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+
+.faq:last-child {
+    border-bottom: none;
+}
+ h1 {
+     font-family: 'Kumbh Sans', sans-serif;
+     font-size: 30px;
+     font-weight: 700;
+     color: hsl(238, 29%, 16%);
+     text-align: center;
+     margin: 30px;
+     padding: 0px;
+ }
+
+ h2 {
+     font-size: 12px;
+     font-weight: 700;
+     color: hsl(238, 29%, 16%);
+ }
+
+ h2:hover {
+     color: hsl(14, 88%, 65%);
+     cursor: pointer;
+ }
+
+ .arrow {
+    float: right;
+ }
+
+ p {
+     display: none;
+     font-size: 12px;
+     font-weight: 400;
+     color: hsl(237, 12%, 33%);
+ }
+
+ @media screen and (min-width: 700px) {
+
+    main {
+        display: grid;
+        grid-template-rows: repeat(7,100px);
+        grid-template-columns: repeat(10,1fr);
+    }
+
+    .contenedor {
+        grid-row: 2/7;
+        grid-column: 3/9;
+        
+    }
+    .faq-container {
+    
+        grid-row: 2 / 7;
+        grid-column: 3 / 10;
+        margin: 0px;
+        justify-content: flex-start;
+ 
+        
+    }
+
+    .faq, h1 {
+        width: 60%;
+        align-self: flex-end;
+        padding: 0px;
+        margin: 10px 40px 20px 0px;
+        }   
+
+    .woman-mobil, 
+    .sombra-mobil {
+        display: block;
+        position: absolute;
+        top: 30%;
+        right: 60%;
+        
+    }
+
+    .sombra-mobil {
+        display: block;
+        position: absolute;
+        top: 45%;
+        right: 65%;
+        
+    }
+    
+    h1 {
+        text-align: left;
+        margin-left: 0px;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+   
+   
+}
+
+@media screen and (min-width: 1000px) {
+
+    .woman-mobil, 
+    .sombra-mobil {
+        display: none;
+    }
+    
+    h1 {
+        text-align: left;
+        margin-left: 0px;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+   
+    .woman-desk,
+    .patron,
+    .box {
+        display: block;
+        position: relative;
+        width: 80%;
+        grid-row: 2 / 6;
+        grid-column: 2 / 5;
+        left: 25%;
+        top: 20%;
+    }
+    .patron {
+        top: 10%;
+    }
+
+    .box {
+        width: 40%;
+        grid-row: 2 / 6;
+        grid-column: 2 / 5;
+        left: 15%;
+        top: 35%;
+    }
+   
+}
+
+@media screen and (min-width: 1200px) {
+
+    main {
+        display: grid;
+        grid-template-rows: repeat(7,100px);
+        grid-template-columns: repeat(10,1fr);
+    }
+
+    .contenedor {
+        grid-row: 2/7;
+        grid-column: 3/9;
+        
+    }
+    .faq-container {
+    
+        grid-row: 2 / 7;
+        grid-column: 3 / 8;
+        margin: 0px;
+        justify-content: flex-start;
+        
+    }
+
+    .faq, h1 {
+        width: 40%;
+        align-self: flex-end;
+        padding: 0px;
+        margin: 10px 100px 20px 0px;
+        }   
+
+    .woman-mobil, 
+    .sombra-mobil {
+        display: none;
+    }
+    
+    h1 {
+        text-align: left;
+        margin-left: 0px;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+   
+    .woman-desk,
+    .patron,
+    .box {
+        display: block;
+        position: relative;
+        width: 80%;
+        grid-row: 2 / 6;
+        grid-column: 2 / 5;
+        left: 25%;
+        top: 20%;
+    }
+    .patron {
+        top: 10%;
+    }
+
+    .box {
+        width: auto;
+        grid-row: 2 / 6;
+        grid-column: 2 / 5;
+        left: 15%;
+        top: 40%;
+    }
+   
+}
